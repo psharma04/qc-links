@@ -246,6 +246,7 @@ main {
 /* Footer Codes */
 
 .footer_div_item {
+  font-size: 130%;
   color: var(--footer_text_color);
   background: var(--footer_background_color);
   padding: 1em;
