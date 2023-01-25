@@ -258,12 +258,17 @@ main {
   text-decoration: none;
 }
 
+.calendar {
+  height: 40vh;
+}
 /* Responsive Codes */
 
 @media (max-width: 768px) { 
   .main_text_item {
     width: 92vw;
   }
+
+
 
   .main_small_button_item {
     width: calc(92vw / 2 - 5px);;
@@ -273,4 +278,6 @@ main {
     width: 92vw;
   }
 }
+
+
 
