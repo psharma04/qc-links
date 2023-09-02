@@ -12,6 +12,34 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj+KsslFkCOt3TvJrX2AV/Gc3wOqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function getAway() {
+      // Get away right now
+      window.open("https://google.com", "_newtab");
+      // Replace current site with another benign site
+      window.location.replace('https://moodle.telt.unsw.edu.au');
+    }
+
+    $(function() {
+
+      $("#get-away").on("click", function(e) {
+        getAway();
+      });
+
+      $("#get-away a").on("click", function(e) {
+        // allow the link to work
+        e.stopPropagation();
+      });
+
+      $(document).keyup(function(e) {
+        if (e.keyCode == 27) { // escape key
+          getAway();
+        }
+      });
+
+    });
+  </script>
   </head>
   <body>
     <header>
